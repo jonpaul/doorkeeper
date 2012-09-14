@@ -17,6 +17,6 @@ module Doorkeeper
     field :redirect_uri, :type => String
     field :revoked_at, :type => DateTime
 
-    index :token, :unique => true
+    index({:token => 1}, { :unique => true})
   end
 end
